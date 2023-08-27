@@ -2,13 +2,17 @@ import styled from 'styled-components';
 
 export const OptionsList = styled.ul`
   display: flex;
+  gap: 30px;
+  flex-direction: column;
+`
+
+export const ItemWrap = styled.li`
+  display: flex;
   gap: 50px;
 `
 
 export const Button = styled.button`
   appearance: none;
-  background-color: transparent;
-  border: 2px solid #1A1A1A;
   border-radius: 15px;
   box-sizing: border-box;
   color: #3B3B3B;
@@ -38,6 +42,11 @@ export const Button = styled.button`
   transform: translateY(0);
   background-color: transparent;
   color: #1A1A1A;
+
+  &:disabled {
+    background-color: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(0, 0, 0, 0.50);
+  }
 }
 }
 `
